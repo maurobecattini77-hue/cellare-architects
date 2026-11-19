@@ -1,0 +1,137 @@
+/* Cellaré Architects: scritte eleganti in oro e bianco perla, nero opaco con effetti lucidi (dal loro brief) */
+@font-face { font-family: 'Bodoni Moda'; src: url('font/BodoniModa.ttf'); font-weight: 400 900; font-style: normal; }
+@font-face { font-family: 'Bodoni Moda'; src: url('font/BodoniModa-Italic.ttf'); font-weight: 400 900; font-style: italic; }
+@font-face { font-family: 'Montserrat'; src: url('font/Montserrat.ttf'); font-weight: 100 900; }
+
+:root {
+  --nero: #0f0e11;
+  --perla: #f3efe7;
+  --bordo-perla: #e2d9ca;
+  --oro: #d9b56a;
+  --oro-scuro: #9c7430;
+  --testo: #ece6da;
+  --tenue: #bcb3a7;
+  --inchiostro: #1b1820;
+  --grigio: #6d6570;
+  --oro-lucido: linear-gradient(180deg, #f7e6b0 0%, #e2c27a 46%, #b98c3d 52%, #e9cc86 100%);
+}
+
+html { background: var(--nero); }
+body {
+  margin: 0; min-width: 1240px; color: var(--testo);
+  background: radial-gradient(1400px 520px at 18% -8%, rgba(255, 255, 255, .07), transparent 62%), linear-gradient(180deg, #151318, #0e0d10 420px);
+  font-family: 'Montserrat', sans-serif; font-size: 17px; line-height: 1.65; font-variant-numeric: lining-nums;
+}
+.cont { width: 1160px; margin: 0 auto; }
+h1, h2, h3, h4 { font-family: 'Bodoni Moda', serif; font-weight: 500; }
+a { color: inherit; }
+[hidden] { display: none !important; }
+
+/* testata: nero lucido con il filo d'oro */
+.testata { position: sticky; top: 0; z-index: 10; background: linear-gradient(180deg, #1d1b21, #0f0e11); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08); border-bottom: 1px solid rgba(217, 181, 106, .45); }
+.testata-dentro { display: flex; align-items: center; justify-content: space-between; height: 86px; }
+.marca { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.marchio { width: 46px; height: 46px; display: block; }
+.marca-testo { display: flex; flex-direction: column; line-height: 1.05; }
+.marca-testo .nome { font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: 25px; letter-spacing: .16em; color: var(--perla); }
+.marca-testo .sotto { font-size: 11px; letter-spacing: .42em; color: var(--oro); margin-top: 4px; }
+.menu a { text-decoration: none; margin-left: 26px; font-weight: 500; font-size: 15px; padding: 8px 0; border-bottom: 1px solid transparent; color: var(--testo); }
+.menu a:hover { color: var(--oro); }
+.menu a.attiva { color: var(--oro); border-bottom-color: var(--oro); }
+
+/* apertura */
+.eroe { background: #1f1a3d; }
+.illustrazione { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 700; }
+.apertura { text-align: center; padding: 58px 0 66px; }
+.slogan { font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 46px; line-height: 1.2; margin: 0 auto 20px; max-width: 980px;
+  background: var(--oro-lucido); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.presenta { max-width: 800px; margin: 0 auto; color: var(--tenue); font-size: 19px; }
+.bottoni { margin: 32px 0 0; }
+.bottone { display: inline-block; padding: 14px 30px; border-radius: 2px; font-weight: 600; font-size: 15px; letter-spacing: .06em; text-decoration: none; margin: 0 8px; border: 0; cursor: pointer; font-family: inherit; }
+.bottone.pieno { background: var(--oro-lucido); color: #1a1408; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5); }
+.bottone.vuoto { border: 1px solid var(--oro); color: var(--oro); background: transparent; }
+
+/* fasce perla con pannelli bianchi */
+.fascia-perla { background: var(--perla); color: var(--inchiostro); padding: 66px 0 76px; }
+.occhiello { color: var(--oro); font-size: 13px; letter-spacing: .3em; margin: 0 0 12px; }
+.fascia-perla .occhiello { color: var(--oro-scuro); }
+h2 { font-size: 44px; line-height: 1.15; margin: 0 0 24px; background: var(--oro-lucido); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.fascia-perla h2 { background: none; color: var(--inchiostro); }
+.chi-siamo { display: grid; grid-template-columns: 1.2fr .8fr; gap: 64px; align-items: start; }
+.chi-siamo p { font-size: 18px; }
+.team { background: #fff; border: 1px solid var(--bordo-perla); border-top: 3px solid var(--oro); padding: 30px 34px; }
+.team h3 { font-size: 30px; margin: 0 0 16px; }
+.fondatore { margin: 0 0 18px; color: var(--grigio); font-size: 15px; }
+.fondatore span { display: block; font-family: 'Bodoni Moda', serif; font-size: 28px; color: var(--inchiostro); }
+.etichetta { font-size: 12px; letter-spacing: .3em; color: var(--oro-scuro); margin: 0 0 6px; }
+.soci { margin: 0; font-size: 17px !important; line-height: 1.9; }
+
+.testa-scheda { padding: 64px 0 44px; }
+.testa-scheda h2 { margin-bottom: 14px; }
+.intro { font-size: 19px; color: var(--tenue); max-width: 820px; margin: 0; }
+
+/* griglie di carte */
+.griglia { display: grid; gap: 22px; }
+.griglia.quattro { grid-template-columns: repeat(4, 1fr); }
+.griglia.tre { grid-template-columns: repeat(3, 1fr); }
+.carta, .pacchetto, .progetto, .voce { background: #fff; border: 1px solid var(--bordo-perla); }
+.carta { padding: 28px 26px 30px; border-top: 3px solid var(--oro); }
+.carta .num { font-family: 'Bodoni Moda', serif; font-size: 30px; color: var(--oro-scuro); margin: 0 0 8px; }
+.carta h3 { font-size: 26px; line-height: 1.15; margin: 0 0 10px; min-height: 2.3em; }
+.carta p:last-child { margin: 0; font-size: 16px; }
+.pacchetto { padding: 34px 32px 36px; text-align: center; display: flex; flex-direction: column; }
+.pacchetto.in-evidenza { border: 2px solid var(--oro); }
+.nome-pacchetto { font-family: 'Bodoni Moda', serif; font-size: 36px; margin: 0; letter-spacing: .04em; }
+.fascia-prezzo { color: var(--oro-scuro); font-weight: 600; letter-spacing: .04em; margin: 6px 0 18px; padding-bottom: 18px; border-bottom: 1px solid var(--bordo-perla); }
+.pacchetto p:nth-child(3) { flex: 1; margin: 0 0 26px; }
+.pacchetto .bottone { margin: 0; }
+.progetto { padding: 30px 30px 32px; }
+.progetto .luogo { font-size: 12px; letter-spacing: .3em; color: var(--oro-scuro); margin: 0 0 6px; }
+.progetto h3 { font-size: 30px; margin: 0 0 10px; }
+.progetto blockquote { margin: 20px 0 0; padding: 16px 0 0; border-top: 1px solid var(--bordo-perla); font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; line-height: 1.45; }
+.progetto cite { display: block; font-family: 'Montserrat', sans-serif; font-style: normal; font-size: 14px; color: var(--grigio); margin-top: 8px; }
+.avviso { font-size: 13px; color: var(--grigio); margin: 28px 0 0; }
+
+/* contatti */
+.contatti { display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: start; }
+.modulo { background: #fff; border: 1px solid var(--bordo-perla); border-top: 3px solid var(--oro); padding: 32px 36px 34px; }
+.modulo h3, .pannello-orari h3 { font-size: 28px; margin: 0 0 16px; }
+.modulo label { display: block; font-size: 14px; color: var(--grigio); margin-bottom: 14px; }
+.modulo input, .modulo select, .modulo textarea { display: block; width: 100%; box-sizing: border-box; margin-top: 6px; padding: 11px 12px; border: 1px solid #d6cdbd; background: #fbf9f5; font: 16px 'Montserrat', sans-serif; color: var(--inchiostro); }
+.modulo .bottone { margin: 8px 0 0; }
+.esito { margin: 16px 0 0; color: var(--oro-scuro); font-weight: 500; }
+.pannello-orari h3 + * { margin-top: 0; }
+.pannello-orari h3:not(:first-child) { margin-top: 30px; }
+
+/* il nostro marketing */
+.mk .parte { font-size: 36px; margin: 0 0 24px; padding-bottom: 10px; border-bottom: 1px solid #cdbf9f; }
+.mk .voce + .parte { margin-top: 60px; }
+.voce { padding: 28px 34px 30px; margin: 0 0 20px; }
+.voce h3 { display: flex; align-items: center; gap: 16px; font-size: 29px; line-height: 1.15; margin: 0 0 12px; }
+.voce h3 span { flex: none; width: 40px; height: 40px; border-radius: 50%; background: #17151a; color: var(--oro); font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+.voce p { margin: 0 0 12px; }
+.voce p:last-child { margin-bottom: 0; }
+.def { color: var(--grigio); border-left: 3px solid var(--oro); padding-left: 14px; font-size: 15.5px; }
+.frase { font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 25px; line-height: 1.4; }
+.swot { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 6px; }
+.q { padding: 18px 22px 20px; border-top: 3px solid; }
+.q h4 { font-size: 23px; margin: 0; line-height: 1.1; }
+.q .tipo { font-size: 13px; color: var(--grigio); margin: 2px 0 8px; }
+.q ul { margin: 0; padding-left: 18px; }
+.q li { margin: 4px 0; font-size: 15.5px; }
+.q.forza { background: #e9f1ec; border-color: #2b6b55; }
+.q.debole { background: #f7ebe7; border-color: #a5523e; }
+.q.opport { background: #eaedf5; border-color: #364f8c; }
+.q.minacce { background: #f7f0e1; border-color: #a77b1f; }
+.tabella { width: 100%; border-collapse: collapse; margin-top: 4px; }
+.tabella td { padding: 11px 0; border-bottom: 1px solid #ece4d6; }
+.tabella td:last-child { text-align: right; font-weight: 600; white-space: nowrap; }
+.quattro-p { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.quattro-p p { background: var(--perla); padding: 14px; text-align: center; margin: 0 !important; font-size: 15px; color: var(--grigio); }
+.quattro-p b { display: block; font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: 24px; color: var(--inchiostro); }
+
+/* piede */
+.piede { background: linear-gradient(180deg, #17151a, #0e0d10); border-top: 1px solid rgba(217, 181, 106, .45); padding: 34px 0 38px; color: var(--tenue); font-size: 15px; }
+.piede p { margin: 4px 0; }
+.piede .nome { font-family: 'Bodoni Moda', serif; font-size: 22px; color: var(--perla); letter-spacing: .04em; }
+.piede .nota { font-size: 13px; opacity: .75; margin-top: 12px; }
